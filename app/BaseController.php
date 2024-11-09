@@ -12,6 +12,12 @@ use think\Validate;
  */
 abstract class BaseController
 {
+
+    /**
+     * 服务实例
+     */
+    protected $service;
+
     /**
      * Request实例
      * @var \think\Request

@@ -9,7 +9,7 @@ class Code{
     /**
      * file path
      */
-    private $filePath = __DIR__. "\code.txt";
+    private $filePath = __DIR__;
 
     /**
      * error message
@@ -28,52 +28,66 @@ class Code{
 
     /**
      * read file and get intel
+     * @param $type code type
      * @return Integer
      */
-    public function __construct(){
-        $this->codes = file_get_contents($this->filePath);
-        return $this->chuck();
+    public function __construct($type, $title = "txt"){
+        fopen("$title.$type", "w"); // create file
+        $this->codes = file_get_contents($this->filePath);//Db get data in the future
+
+        call_user_func([$this, $type]);
+
+        $answer = $this->chuck();
+        fclose();   // close file
+        unlink("$title.$type"); // delete file;
+        return $answer;
     }
 
     /**
      * @param Integer $n
      * @return avoid
      */
-    private function getCode(){
+    private function &getCode(){
         return $this->codes;
+    }
+
+    private function php (){
+        $code =  "<?php \n" . $this->getCode() . "\n ?>";
+        $command = "php " . $this->filePath;
+        return $this->run($command);
+    }
+
+    private function py(){
+
+    }
+
+    private function js(){
+        
+    }
+
+    private function cpp(){
+
+
+    }
+
+    private function c (){
+
     }
 
     /**
      * run code
      * @param Integer $n
+     * @param String $command file path
      * @return avoid
      */
-    private function run(){
-        // set file path
-        $filePath = __DIR__.'/Test.php';
-        $n = 1;
-        ini_set('disable_functions', 'eval');
-        echo json_encode(ini_get('disable_functions'));
-        echo json_encode(ini_get('post_max_size'));
-        // echo json_encode(ini_set('display_errors', '1'));
+    private function run(string $command){
         try{
             // run code
-            eval($this->codes);
+            $output = shell_exec($command);
+            return $output;
         }catch(Exception $e){               // 检查文件是否成功执行
             return $e;
         }
-    }
-
-    /**
-     * chuck answer
-     */
-    private function chuck(){
-        $count = 1;
-        for($i = 0;$i < $count;$i++){
-            $this->run();
-            if($this->error)return $this->error;
-        }
-        // if(!$ans)return false;
     }
 
     private function format(){
