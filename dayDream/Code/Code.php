@@ -50,13 +50,16 @@ class Code{
      */
     private function run(){
         // set file path
+        $filePath = __DIR__.'/Test.php';
+        $n = 1;
+        ini_set('disable_functions', 'eval');
+        echo json_encode(ini_get('disable_functions'));
+        echo json_encode(ini_get('post_max_size'));
+        // echo json_encode(ini_set('display_errors', '1'));
         try{
             // run code
-            $output = shell_exec('../compile/php.c++');
-            echo $output;
-            echo "-----";
-            // 检查文件是否成功执行
-        }catch(Exception $e){
+            eval($this->codes);
+        }catch(Exception $e){               // 检查文件是否成功执行
             return $e;
         }
     }
@@ -65,8 +68,8 @@ class Code{
      * chuck answer
      */
     private function chuck(){
-        $count = 5;
-        for($i = 1;$i < $count;$i++){
+        $count = 1;
+        for($i = 0;$i < $count;$i++){
             $this->run();
             if($this->error)return $this->error;
         }
