@@ -16,7 +16,7 @@ abstract class BaseController
     /**
      * 服务实例
      */
-    protected $service;
+    protected $services;
 
     /**
      * Request实例
@@ -58,7 +58,8 @@ abstract class BaseController
 
     // 初始化
     protected function initialize()
-    {}
+    {
+    }
 
     /**
      * 验证数据
