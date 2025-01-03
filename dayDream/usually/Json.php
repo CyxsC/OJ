@@ -1,6 +1,6 @@
 <?php
 
-namespace App\usually;
+namespace dayDream\usually;
 
 use think\Response;
 

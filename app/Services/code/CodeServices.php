@@ -2,10 +2,10 @@
 namespace App\services\code;
 
 use dayDream\BuildCode;
-use app\services\Service;
-use app\sql\CodeSql\CodeSql;
+use app\services\BaseService;
+use app\sql\code\CodeSql;
 
-class CodeServices extends Service{
+class CodeServices extends BaseService{
 
     public function __construct(CodeSql $codeSql){
         parent::__construct();
@@ -31,7 +31,8 @@ class CodeServices extends Service{
      * @return array
      */
     public function getTitleId($id){
-        return $this->sql->getTitleId($id);
+        $list = $this->sql->getTitleId($id);
+        return compact('list');
     }
 
     /**

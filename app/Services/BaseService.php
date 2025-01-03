@@ -2,7 +2,7 @@
 
 namespace App\services;
 
-abstract class Service{
+abstract class BaseService{
 
     /**
      * sql实例

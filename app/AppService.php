@@ -4,7 +4,7 @@ declare (strict_types = 1);
 namespace app;
 
 use think\Service;
-use app\usually\Json;
+use dayDream\usually\Json;
 
 /**
  * 应用服务类

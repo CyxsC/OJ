@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Sql\CodeSql;
+namespace App\Sql\code;
 
 use app\sql\Sql;
 use app\model\code\Code;
@@ -19,10 +19,10 @@ class CodeSql extends Sql
 
     public function getTitle($page = 1, $limit = 10, $where = null, $order = null)
     {
-        return $this->model->page($page, $limit)->where($where)->order($order)->select();
+        return $this->sql->page($page, $limit)->where($where)->order($order)->select();
     }
 
     public function getTitleId($id = null){
-        return $this->model->where('id', $id)->select();
+        return $this->sql->where('id', 1)->select();
     }
 }

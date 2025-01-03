@@ -1,10 +1,10 @@
 <?php
 namespace App\services\code;
 
-use app\services\Service;
-use app\sql\CodeSql\CodeUsableSql;
+use app\services\BaseService;
+use app\sql\code\CodeUsableSql;
 
-class CodeUsableServices extends Service{
+class CodeUsableServices extends BaseService{
 
     public function __construct(CodeUsableSql $codeSql){
         parent::__construct();

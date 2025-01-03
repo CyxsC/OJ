@@ -11,3 +11,19 @@ if(!function_exists('getLang')){
         return app('lang')->get($lang);
     }
 }
+
+if(!function_exists('getLangs')){
+    /**
+     * 生成列表树 tree
+     * @param array $data 语言标识
+     * @return array;
+     */
+    function tree($data,$id = 0): array{
+        // $childrens = [];
+        // foreach($data as $v){
+        //     $v['pid'] == $id?array_push($childrens,$v):'';
+        // }
+        return [1];
+        // return tree($data());
+    }
+}

@@ -39,10 +39,10 @@ class Code extends BaseController
      */
     public function getTitleId(Request $request)
     {
-        // $id = (int)$request->id();
-        // echo $id;
-        // return;
-        return app('json')->success($this->services->getTitleId($id));
+        $data = $this->request->getMore([
+            ['id', ''],
+        ]);
+        return app('json')->success($this->services->getTitleId($data['id']));
     }
 
     /**

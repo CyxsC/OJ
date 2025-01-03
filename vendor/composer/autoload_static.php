@@ -22,13 +22,13 @@ class ComposerStaticInitaafb8e708d120f48e609e2140b98e4d4
             'think\\app\\' => 10,
             'think\\' => 6,
         ),
-        'd' =>
-        array (
-            'dayDream\\' => 10
-        ),
         'a' => 
         array (
             'app\\' => 4,
+        ),
+        'd' =>
+        array (
+            'dayDream\\' => 10
         ),
         'S' => 
         array (
@@ -51,6 +51,10 @@ class ComposerStaticInitaafb8e708d120f48e609e2140b98e4d4
             'League\\Flysystem\\Cached\\' => 24,
             'League\\Flysystem\\' => 17,
         ),
+        'F' => 
+        array (
+            'Firebase\\JWT\\' => 13,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -69,13 +73,13 @@ class ComposerStaticInitaafb8e708d120f48e609e2140b98e4d4
             2 => __DIR__ . '/..' . '/topthink/think-helper/src',
             3 => __DIR__ . '/..' . '/topthink/think-orm/src',
         ),
-        'dayDream\\' => 
-        array(
-            0 => __DIR__ . '/../..' . '/dayDream',
-        ),
         'app\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app',
+        ),
+        'dayDream\\' => 
+        array(
+            0 => __DIR__ . '/../..' . '/dayDream',
         ),
         'Symfony\\Polyfill\\Php80\\' => 
         array (
@@ -124,6 +128,10 @@ class ComposerStaticInitaafb8e708d120f48e609e2140b98e4d4
         'League\\Flysystem\\' => 
         array (
             0 => __DIR__ . '/..' . '/league/flysystem/src',
+        ),
+        'Firebase\\JWT\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/firebase/php-jwt/src',
         ),
     );
 

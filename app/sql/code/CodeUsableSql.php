@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Sql\CodeSql;
+namespace App\Sql\code;
 
 use app\sql\Sql;
 use app\model\code\CodeUsable;
@@ -18,6 +18,6 @@ class CodeUsableSql extends Sql
     }
 
     public function getList(){
-        return $this->model->column('name');
+        return $this->sql->column('name');
     }
 }

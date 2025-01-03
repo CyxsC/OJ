@@ -3,13 +3,22 @@
         'name' => 'topthink/think',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => '31ee4df531c6b8e26484f595d050d80544c66abb',
+        'reference' => '2369f442b50e4ed80ada52f472231fee28175f20',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
         'dev' => true,
     ),
     'versions' => array(
+        'firebase/php-jwt' => array(
+            'pretty_version' => 'v6.10.1',
+            'version' => '6.10.1.0',
+            'reference' => '500501c2ce893c824c801da135d02661199f60c5',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../firebase/php-jwt',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'league/flysystem' => array(
             'pretty_version' => '1.1.10',
             'version' => '1.1.10.0',
@@ -130,7 +139,7 @@
         'topthink/think' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '31ee4df531c6b8e26484f595d050d80544c66abb',
+            'reference' => '2369f442b50e4ed80ada52f472231fee28175f20',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
